@@ -8,6 +8,7 @@ const Products = () => {
     fetch("https://double-chabi-server.herokuapp.com/getProducts")
     .then((res) => res.json())
     .then((json) => {
+        console.log(json)
         setProducts(json.list);
     })
   }, [])
