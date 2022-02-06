@@ -1,5 +1,6 @@
 .msgCenter {
     margin-left: 20px;
+    width: 200px;
     margin-top: 10%;
     align-items: center;
     margin-bottom: 10px;
@@ -9,10 +10,10 @@
     border-style: groove;
 
   }
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .msgCenter {
-    width: 31%;
-    margin-left: 20px;
+    width: 50%;
+    margin-left: 25%;
     margin-top: 10%;
     align-items: center;
     margin-bottom: 10px;
@@ -22,11 +23,15 @@
     border-style: groove;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 500px) {
     .img {
       width: 100%;
     }
   }
+  
+.img {
+  width: 100%;
+}
 .msgCenter:hover {
     border-color: #000000;
     border-width: 1px;
@@ -39,7 +44,7 @@
     flex-direction: row;
   } 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 800px) {
+@media (max-width: 500px) {
     .flex-container {
         display: flex;
         flex-direction: column;
