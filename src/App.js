@@ -4,10 +4,14 @@ import {BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navigation from './Navigation';
 import Home from './Home';
 import Products from './products';
+import store from './store';
 import Product from './product';
+import { Provider } from 'react-redux';
 
 function App() {
   return (
+    
+    <Provider store={store}>
     <div className="App">   
     <Navigation/>
             <Routes>
@@ -35,6 +39,8 @@ function App() {
         
       </body>
     </div>
+    
+    </Provider>
   );
 }
 
