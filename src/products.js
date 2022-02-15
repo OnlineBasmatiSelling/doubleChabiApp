@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getProdctList } from './actions/productAction';
+import AddIcon from "@material-ui/icons/ShoppingCart";
 import './products.css';
 const Products = () => {
   const dispatch=useDispatch();
@@ -10,7 +11,9 @@ const Products = () => {
     dispatch(getProdctList());
   }, [])
   console.log(products);
-  
+  const addToCart=()=>{
+    
+  }
     const elm = products.map((i, index) => {
       return  <Link to={`/Product?id=${index}`} className='text-decoration-off'>
       <div className="msg-center" key={index}>
@@ -20,6 +23,9 @@ const Products = () => {
               </div>
               <div className='price-text'>
                   {i.price} per kg
+              </div>
+              <div onClick={addToCart} className='content-img'>
+              <AddIcon fontSize="small" />
               </div>
       </div>
       </Link>
